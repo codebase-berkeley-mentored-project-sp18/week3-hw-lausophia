@@ -8,7 +8,7 @@ urlpatterns = [
     # Question 1
     #
     # REPLACE THE BELOW LINE with the correct view and URL for the about page
-    url(r'^not_the_right_url/$', views.index, name='about'),
+    url(r'^about$', views.about, name='about'),
     #################################################################
     # Question 2
     #
@@ -17,5 +17,5 @@ urlpatterns = [
     # named 'pk' to the URL's view function.
     #
     # REPLACE THE BELOW LINE with the correct view and URL for the post details page
-    url(r'^also_not_right/(?P<pk>\d+)$', views.index, name='post_details'),
-]
+    url(r'^details/(?P<pk>\d+)$', views.post_details, name='post_details')
+    ]

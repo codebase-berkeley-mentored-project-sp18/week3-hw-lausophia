@@ -16,11 +16,12 @@ def about(request):
     #################################
     # Question 1
     # REPLACE THE LINE WITH YOUR CODE
-    return HttpResponse("No about page :(")
+    return render(request,"posts/about.html")
 
 def post_details(request, pk):
     #################################
     # Question 2
     # You should create a new file in the templates directory.
     # REPLACE THE LINE WITH YOUR CODE
-    return HttpResponse("No post details page :(")
+    all_posts = Post.objects.all()
+    return render(request, "posts/post_details.html", {"post": all_posts[pk]})
