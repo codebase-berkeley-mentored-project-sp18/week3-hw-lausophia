@@ -23,5 +23,5 @@ def post_details(request, pk):
     # Question 2
     # You should create a new file in the templates directory.
     # REPLACE THE LINE WITH YOUR CODE
-    all_posts = Post.objects.all()
-    return render(request, "posts/post_details.html", {"post": all_posts[pk]})
+    post=Post.objects.get(pk=pk)
+    return render(request, "posts/post_details.html", {"post": post})
